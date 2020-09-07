@@ -1,0 +1,460 @@
+<html>
+<head>
+<title>Dumaguete</title>
+<link rel="shortcut icon" href="favicon.png" type="image\png" />
+<style>
+
+	body {
+		margin: 0;
+		background-color: #F8F3D4;
+		position: relative;
+	}
+	
+	.nav {
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+		overflow: hidden;
+	}
+	
+	.nav a {
+		font-family: 'Verdana';
+		font-size: 15px;
+		color: #ccc;
+		padding: 15px 20px 15px 20px;
+		display: inline-block;
+		text-decoration: none;
+		transition-duration: 0.3s;
+		border-bottom: 2px solid rgba(0,0,0,0);
+	}
+	
+	.nav a:hover {
+		border-bottom: 2px solid #00B8A9;
+		color: #00B8A9;
+	}
+	
+	.nav input {
+		display: inline;
+		width: 200px;
+		padding: 5px 5px 5px 20px;
+		border: 1px solid #ccc;
+		background-color: #444;
+		border-radius: 10px;
+		transition-duration: 0.5s;
+	}
+	
+	.nav input:focus {
+		border: 2px solid #00B8A9;
+		background-color: white;
+		width: 300px;
+		cursor: text;
+		color: #555;
+		outline: none;
+	}
+	
+	.banner {
+		background: url("dp.jpg");
+		height: 700px;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	
+	.bancon {
+		background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+		height: 100%;
+		width: 100%;
+		text-align: center;
+	}
+	
+	h2 {
+		color: #F8F3D4;
+		font-family: 'Verdana';
+		padding-top: 200px;
+		margin-bottom: -50px;
+		font-size: 50px;
+		font-weight: 100;
+		text-shadow: 0px 2px 10px black;
+	}
+	
+	h1 {
+		color: #F8F3D4;
+		font-family: 'Verdana';
+		font-size: 120px;
+		font-weight: 100;
+		text-shadow: 0px 2px 10px black;
+		letter-spacing: 10px;
+	}
+	
+	h3 {
+		margin-left: 50px;
+		color: #555;
+		font-family: 'Century Gothic';
+		font-size: 30px;
+	}
+	
+	.pone {
+		margin-left: 100px;
+		width: 600px;
+		color: #555;
+		font-family: 'Century Gothic';
+		font-size: 17px;
+		display: inline-block;
+	}
+	
+	.dcogp {
+		display: inline-block;
+		margin-top: -500px;
+		height: 600px;
+		width: 45%;
+		margin-left: 55%;
+		background-image: url("dumwalk.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	
+	.university {
+		padding: 10%;
+		width: 80%;
+		background-color: #555;
+		color: #ccc;
+		font-family: 'Century Gothic';
+		font-size: 15px;
+		text-align: center;
+	}
+	
+	.siliman {
+		width: 100%;
+		height: 500px;
+		background-image: url("sil.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.dark {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0));
+	}
+	
+	.dark p {
+		display: inline-block;
+		width: 500px;
+		padding-top: 100px;
+		margin-left: 50px;
+		color: #ccc;
+		font-family: 'Century Gothic';
+		font-size: 20px;
+	}
+	
+	.beach {
+		width: 100%;
+		height: 500px;
+		background-image: url("beach.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.beach p {
+		display: inline-block;
+		width: 400px;
+		padding-top: 50px;
+		margin-left: 800px;
+		color: black;
+		text-shadow: -1px 1px 0px white;
+		font-family: 'Century Gothic';
+		font-size: 25px;
+	}
+	
+	.redin {
+		padding: 50px 10% 50px 10%;
+		width: 80%;
+	}
+	
+	.redinp {
+		color: #F6416C;
+		border: 3px solid #F6416C;
+		font-family: 'Century Gothic';
+		font-size: 15px;
+		padding: 50px;
+	}
+	
+	.redin h3 {
+		color: #F6416C;
+		font-size: 30px;
+	}
+	
+	.transport {
+		height: 450px;
+		width: 400px;
+		background-color: #F8F3D4;
+		text-align: left;
+		overflow: hidden;
+		transition-duration: 1s;
+		transition-delay: 1s;
+	}
+	
+	.transport:hover {
+		background-color: #00B8A9;
+		box-shadow: -5px 5px 0px #FFDE7D;
+	}
+	
+	.move {
+		height: 900px;
+		overflow: hidden;
+		width: 100%;
+		transition-duration: 1s;
+		transition-delay: 1s;
+	}
+	
+	.transport:hover .move {
+		transform: translateY(-450px);
+	}
+	
+	.transport h4 {
+		font-family: 'Century Gothic';
+		font-size: 25px;
+		padding-left: 20px;
+		color: #555;
+	}
+	
+	.transport h5 {
+		font-family: 'Century Gothic';
+		font-size: 20px;
+		padding-left: 20px;
+		font-weight: 100;
+		margin-top: -20px;
+		color: #555;
+	}
+	
+	.transport a {
+		font-family: 'Century Gothic';
+		font-size: 20px;
+		margin-left: 20px;
+		padding: 5px 10px 5px 10px;
+		margin-top: 20px;
+		color: #555;
+		text-decoration: none;
+		transition-duration: 0.3s;
+	}
+	
+	.transport a:hover {
+		background-color: #00B8A9;
+		color: white;
+	}
+	
+	.tone {
+		height: 250px;
+		width: 400px;
+		background-image: url("dair.jpg");
+		background-size: 100%;
+		background-position: center;
+	}
+	
+	.ttwo {
+		height: 250px;
+		width: 400px;
+		background-image: url("dsea.jpg");
+		background-size: 100%;
+		background-position: center;
+	}
+	
+	.tthree {
+		height: 250px;
+		width: 400px;
+		background-image: url("dland.jpg");
+		background-size: 100%;
+		background-position: center;
+	}
+	
+	.end {
+		width: 100%;
+		background-color: #FFDE7D;
+	}
+	
+	h6 {
+		font-family: 'Century Gothic';
+		color: #555;
+		font-size: 30px;
+	}
+	
+	.end p {
+		font-family: 'Century Gothic';
+		color: #555;
+		font-size: 17px;
+	}
+	
+	input[type="email"] {
+		padding: 10px 20px 10px 20px;
+		font-size: 15px;
+		width: 300px;
+		font-family: 'Verdana';
+		color: #ccc;
+		background-color: #555;
+		border: none;
+		display: block;
+	}
+		
+	input[type="password"] {
+		padding: 10px 20px 10px 20px;
+		font-size: 15px;
+		width: 200px;
+		font-family: 'Verdana';
+		color: #ccc;
+		background-color: #555;
+		border: none;
+	}
+	
+	input[type="submit"] {
+		padding: 10px 5px 10px 5px;
+		font-size: 15px;
+		width: 100px;
+		font-family: 'Verdana';
+		background-color: #ccc;
+		color: #555;
+		border: none;
+		margin-left: -4px;
+		transition-duration: 0.3s;
+	}
+	
+	input[type="submit"]:hover {
+		color: #ccc;
+		background-color: #555;
+		border: 3px solid #FFDE7D;
+		padding: 7px 3px 7px 3px;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="nav">
+		<span style="width: 300px; display: inline-block;"></span>
+		<a href="home.html" style="border-bottom: 2px solid #00B8A9; color: #00B8A9;">About Dumaguete</a>
+		<a href="tourist.html">Tourist Spots</a>
+		<a href="contact.html">Contact Us</a>
+		<p style="margin-left: 100px;
+		font-family: 'Verdana';
+		font-size: 15px;
+		color: #ccc;
+		padding: 10px 20px 10px;
+		display: inline">SEARCH</p><input type="text">
+	</div>
+	<div class="banner">
+		<div class="bancon">
+			<h2>explore</h2>
+			<h1><font color="#F6416C">D</font>UMA<font color="#00B8A9">G</font>UE<font color="#FFDE7D">TE</font></h1>
+		</div>
+	</div>
+	<br><br><br><br><br><br>
+	<h3>Dumaguete : the city of gentle people</h3>
+	<p class="pone">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dumaguete is referred to as a university city because of the presence of four universities and a number of other colleges where students of the province converge to enroll for tertiary education. The city is also a popular educational destination for students of surrounding provinces and cities in Visayas and Mindanao. The city is best known for Silliman University, the country's first Protestant university and the first American university in Asia. There are also 18 public elementary schools and 8 public high schools. The city's student population is estimated at 30,000.</p>
+	<div class="dcogp">
+	</div>
+	<div class="university">
+	<strong>a university city</strong><br><br>Dumaguete has earned the distinction of being known as the "center of learning in the South," or a university city due to the presence of universities that have made their mark nationally and abroad. The city is a melting pot of students, professionals, artists, scholars and the literati coming from different parts of the country and the world.
+	</div>
+	<div class="siliman">
+		<div class="dark">
+			<p>
+				Silliman University is the dominant institution of higher learning in Dumaguete, providing the city with a distinct university town atmosphere. It is the first Protestant university in the country and the first American university in Asia. The 610,000 m² campus is adjacent to and intermixed with the city's downtown district.[16] Some of its buildings have likewise been recognized as landmarks. These buildings include the Silliman Hall, Hibbard Hall, Katipunan Hall, the Luce Auditorium, and the Silliman Main Library (considered as one of the biggest libraries in the Philippines).
+			</p>
+		</div>
+	</div>
+	<div class="beach">
+		<p>
+				Unlike metropolitan cities, Dumaguete is more relaxed, and life here moves at a steady, calm pace. However, the City of Gentle People is not spared from the hustle and bustle of an urban town. Days can be stressful, and during times like these, the perfect way to wind down is a visit to the beautiful white sand bar in Manjuyod.
+		</p>
+	</div>
+	<br><br><br>
+	<div class="redin">
+		<h3>:: Dumaguete ::</h3>
+		<p class="redinp">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dumaguete has a land area of 3,362 hectares (8,310 acres), situated on the plains of the southeastern coast of the large island of Negros, near the mouth of the Banica River. Of the province's 19 municipalities/towns and 6 cities, Dumaguete is the smallest in terms of land area. It is bounded on the north by the town of Sibulan, on the south by the town of Bacong and on the west by the town of Valencia.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As a coastal city, it is bounded on the east by the Bohol Sea and the Tañon Strait, serving as a natural border of southeastern Negros Island Region to the neighboring Central Visayas. The city's topography is generally flat from two to six kilometers from the shoreline. It slopes gently upwards to the adjoining municipality of Valencia. The highest ground elevation is located at the boundary of the municipality of Valencia, about one hundred meters above mean sea level. About 93% of the land have slopes of less than 3%. The remaining areas have 3% to 5% slope.
+		</p>
+	</div>
+	<br><br><br>
+	<table width="100%">
+		<tr>
+			<td align="center">
+				<div class="transport">
+					<div class="move">
+					<div style="width: 400px; height: 550px; display: block;">
+					<div class="tone"></div>
+					<h4>travel by air</h4>
+					<h5>Sibulan Airport</h5>
+					<a href="contact.html">+ more</a>
+					<br><br><br>
+					<div>
+					<div style="width: 400px; height: 550px;">
+					<p style="padding: 25px;font-family: 'Century Gothic'; font-size: 15px; color: white; text-align: justify;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sibulan Airport (IATA: DGT, ICAO: RPVD), also known as Dumaguete Airport or Dumaguete-Sibulan Airport, is the city's domestic airport located in neighboring Sibulan town in the north. It provides daily flights to and from Manila and Cebu City through Cebu Pacific, Cebgo and PAL Express while Cebgo is servicing both Mindanao important urban centers, thrice weekly flights to Davao City and Cagayan de Oro City. However, a new airport is being planned to be built in Bacong, a town bordering Dumaguete in the south The proposal for the transfer and upgrading of this airport to international standards has already been approved and should be completed before 2025. An initial PHP 500 million budget has already been released for initial study and procurement of free lands.
+					</p>
+					</div>
+					</div>
+				</div>
+			</td>
+			<td align="center">
+				<div class="transport">
+					<div class="move">
+					<div style="width: 400px; height: 550px; display: block;">
+					<div class="ttwo"></div>
+					<h4>travel by sea</h4>
+					<h5>The Port of Dumaguete</h5>
+					<a href="contact.html">+ more</a>
+					<br><br><br>
+					<div>
+					<div style="width: 400px; height: 550px;">
+					<p style="padding: 25px;font-family: 'Century Gothic'; font-size: 15px; color: white; text-align: justify;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dumaguete, as a major port city is a jump-off point for passengers/tourists who are going to other Visayas and Mindanao areas. There are daily ferry connections to the islands of Cebu, Bohol, Siquijor and Mindanao operated by Archipelago Philippine Ferries Corporation (Fast Cat), Montenegro Lines, Ocean Jet Shipping, Cokaliong and other companies. Dumaguete is an access city for passengers/tourists going to Cebu which is dubbed as economic hub of the Visayas. There are smaller ports north of the city where short and frequent ferry connections are available to that island as an alternative. Dumaguete is a port of call for travelers to Manila, Dapitan and Zamboanga City by ship serviced by 2GO Travel.
+					</p>
+					</div>
+					</div>
+				</div>
+			</td>
+			<td align="center">
+				<div class="transport">
+					<div class="move">
+					<div style="width: 400px; height: 550px;">
+					<div class="tthree"></div>
+					<h4>travel by land</h4>
+					<h5>Ceres</h5>
+					<a href="contact.html">+ more</a>
+					<br><br><br>
+					<div>
+					<div style="width: 400px; height: 550px;">
+					<p style="padding: 25px;font-family: 'Century Gothic'; font-size: 15px; color: white; text-align: justify;">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The main form of public transport in Dumaguete is the motorized tricycle. The Dumaguete version of the motorized tricycle can fit up to 6-8 passengers. For transport to destinations outside the city limit, there are jeepney and buses travelling set routes. Meanwhile, Vallacar Transit Corporation, the company that operates Ceres buses recently constructed a 2-storey terminal building in Dumaguete just beside the newly erected commercial center, the Marketplace.
+					</p>
+					</div>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<br><br><br><br><br><br>
+	<div class="end">
+	<br><br><br>
+		<table width="60%" style="margin-left: 40%">
+			<tr>
+				<td valign="top">
+				<h6>SIGN IN</h6>
+				<p>get updated</p>
+				<input type="email" placeholder="E-mail Account"/>
+				<input type="password" placeholder="Password"/>
+				<input type="submit" placeholder="submit"/>
+				</td>
+				<td valign="top">
+				<h6>KAMUSTA</h6>
+				<p>Mikhailangelo B. Panzo :: <i>website designer</i><br>
+				contact number: 0905 862 9483<br>
+				residence: Nonoc, Larena, Siquijor<br>
+				main office: Siquijor Provincial Science High School</p>
+				</td>
+		</table>
+	<br><br><br>
+	</div>
+</body>
+</html>

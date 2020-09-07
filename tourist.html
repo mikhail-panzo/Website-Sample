@@ -1,0 +1,357 @@
+<html>
+<head>
+<title>Dumaguete</title>
+<link rel="shortcut icon" href="favicon.png" type="image\png" />
+<style>
+	body {
+		margin: 0;
+		background-color: #F8F3D4;
+		position: relative;
+	}
+	
+	.nav {
+		position: fixed;
+		z-index: 1000;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+		overflow: hidden;
+	}
+	
+	.nav a {
+		font-family: 'Verdana';
+		font-size: 15px;
+		color: #ccc;
+		padding: 15px 20px 15px 20px;
+		display: inline-block;
+		text-decoration: none;
+		transition-duration: 0.3s;
+		border-bottom: 2px solid rgba(0,0,0,0);
+	}
+	
+	.nav a:hover {
+		border-bottom: 2px solid #00B8A9;
+		color: #00B8A9;
+	}
+	
+	.nav input {
+		display: inline;
+		width: 200px;
+		padding: 5px 5px 5px 20px;
+		border: 1px solid #ccc;
+		background-color: #444;
+		border-radius: 10px;
+		transition-duration: 0.5s;
+	}
+	
+	.nav input:focus {
+		border: 2px solid #00B8A9;
+		background-color: white;
+		width: 300px;
+		cursor: text;
+		color: #555;
+		outline: none;
+	}
+	
+	.info {
+		width: 80%;
+		margin: 0 auto;
+		border: 5px solid #F6416C;
+	}
+	
+	.info p {
+		font-family: 'Century Gothic';
+		font-size: 20px;
+		color: #F6416C;
+		padding: 50px;
+	}
+	
+	h1 {
+		font-family: 'Century Gothic';
+		font-size: 45px;
+		color: #F6416C;
+		text-align: center;
+		width: 100%;
+	}
+	
+	.cont {
+		height: 300px;
+		width: 700px;
+		margin-left: 50px;
+		background-color: #00B8A9;
+		position: relative;
+		transition-duration: 0.5s;
+	}
+	
+	.cont:hover {
+		box-shadow: -10px -10px 0px #FFDE7D;
+	}
+	
+	.cont p {
+		margin-left: 220px;
+		padding: 20px;
+		color: white;
+		font-family: 'Century Gothic';
+		font-size: 15px;
+		display: inline-block;
+		width: 400px;
+		position: absolute;
+		transition-duration: 0.5s;
+		height: 250px;
+	}
+	
+	.cont:hover p {
+		background-color: #F6416C;
+		width: 400px;
+		box-shadow: 100px 0px 0px #F6416C;
+		transform: translateX(100px)translateY(30px);
+	}
+	
+	#pic {
+		height: 100%;
+		width: 200px;
+		transition-duration: 0.5s;
+		display: inline-block;
+		position: absolute;
+	}
+	
+	.cont:hover #pic {
+		width: 400px;
+	}
+	
+	.c1 {
+		background-image: url("rb.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.c2 {
+		background-image: url("tl.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.c3 {
+		background-image: url("ct.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.c4 {
+		background-image: url("sh.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.c5 {
+		background-image: url("bt.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.c6 {
+		background-image: url("sa.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+	
+	.ads {
+		width: 450px;
+		margin-left: 0px;
+		box-shadow: -1px 3px 10px rgba(0,0,0,0.5);
+		padding: 25px;
+	}
+	
+	h2 {
+		font-family: 'Century Gothic';
+		font-size: 30px;
+		color: #555;
+	}
+	
+	.ads img {
+		width: 450px;
+	}
+	
+	h3 {
+		font-family: 'Century Gothic';
+		font-size: 25px;
+		color: #555;
+		display: inline-block;
+		transition-duration: 0.3s;
+	}
+	
+	.ads a {
+		text-decoration:none;
+	}
+	
+	.ads a:hover h3 {
+		box-shadow: 0px 2px 0px #F6416C;
+		color: #F6416C;
+	}
+	
+	.ads p {
+		font-family: 'Century Gothic';
+		font-size: 15px;
+		color: #555;
+	}
+	.end {
+		width: 100%;
+		background-color: #FFDE7D;
+	}
+	
+	h6 {
+		font-family: 'Century Gothic';
+		color: #555;
+		font-size: 30px;
+	}
+	
+	.end p {
+		font-family: 'Century Gothic';
+		color: #555;
+		font-size: 17px;
+	}
+	
+	input[type="email"] {
+		padding: 10px 20px 10px 20px;
+		font-size: 15px;
+		width: 300px;
+		font-family: 'Verdana';
+		color: #ccc;
+		background-color: #555;
+		border: none;
+		display: block;
+	}
+		
+	input[type="password"] {
+		padding: 10px 20px 10px 20px;
+		font-size: 15px;
+		width: 200px;
+		font-family: 'Verdana';
+		color: #ccc;
+		background-color: #555;
+		border: none;
+	}
+	
+	input[type="submit"] {
+		padding: 10px 5px 10px 5px;
+		font-size: 15px;
+		width: 100px;
+		font-family: 'Verdana';
+		background-color: #ccc;
+		color: #555;
+		border: none;
+		margin-left: -4px;
+		transition-duration: 0.3s;
+	}
+	
+	input[type="submit"]:hover {
+		color: #ccc;
+		background-color: #555;
+		border: 3px solid #FFDE7D;
+		padding: 7px 3px 7px 3px;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="nav">
+		<span style="width: 300px; display: inline-block;"></span>
+		<a href="home.html">About Dumaguete</a>
+		<a href="tourist.html" style="border-bottom: 2px solid #00B8A9; color: #00B8A9;">Tourist Spots</a>
+		<a href="contact.html">Contact Us</a>
+		<p style="margin-left: 100px;
+		font-family: 'Verdana';
+		font-size: 15px;
+		color: #ccc;
+		padding: 10px 20px 10px;
+		display: inline">SEARCH</p><input type="text">
+	</div>
+	<br><br><br><br><br><br><br><br><br><br>
+	<div class="info">
+		<p>
+		A university town and provincial capital, bustling and relatively urbane, thanks in part to a large and thriving expat community, Dumaguete is also a convenient base for exploring all that southern Negros has to offer. The small city centre is as cramped, noisy and chaotic as any another city in the Philippines, but Dumaguete's harbour-front promenade, lined with upmarket bars, restaurants and food stalls, and blessed with peaceful sea views, is an undeniable draw. After becoming familiar with the city – one only needs a couple of days – it becomes a comfortable place to return after short stints diving, hiking or swimming nearby.
+		</p>
+	</div>
+	<br><br><br><br><br>
+	<h1>take a look at these famous spots<br>here in Dumaguete!</h1>
+	<br><br><br><br><br>
+	<table width="100%">
+		<tr>
+			<td width="60%">
+				<div class="cont">
+					<div id="pic" class="c1"></div>
+					<p><strong>Rizal Boulevard</strong><br>While Filipino cities aren't generally known for their beauty or charm, Dumaguete's waterfront promenade along Rizal Blvd is an exception to the rule. Constructed in 1916, this scenic quarter-mile lined with old-fashioned street lamps is a peaceful spot to stroll, attracting families on picnics, power walkers and those content to sit on benches gazing out to sea. Nearby is a good selection of restaurants, bars and food stalls.</p>
+				</div>
+				<br><br><br>
+				<div class="cont">
+					<div id="pic" class="c2"></div>
+					<p><strong>Twin Lakes National Park</strong><br>About 20km northwest of Dumaguete, the twin crater lakes of Balinsasayao and Danao offer some wonderfully scenic hiking. The area is virgin forest and full of wildlife, including monkeys and birds; if you're lucky you might spy a rare Philippine spotted deer or Visayan warty pig.</p>
+				</div>
+				<br><br><br>
+				<div class="cont">
+					<div id="pic" class="c3"></div>
+					<p><strong>Centrop</strong><br>Opposite the hospital is this small zoo and research centre housing 16 species of indigenous mammals, reptiles and birds, including the critically endangered Negros bleeding-heart pigeon, Philippine spotted deer (only found on Negros and Panay) and the Visayan warty pig. Donations are appreciated, and needed, as conditions are worrisome.</p>
+				</div>
+				<br><br><br>
+				<div class="cont">
+					<div id="pic" class="c4"></div>
+					<p><strong>Silliman University Anthropology Museum</strong><br>Housed in Hibbard Hall on the university campus, this very nice anthropology and ethnobotany collection includes artefacts from the indigenous Negritos and the Islamic period, including a massive ceremonial 10ft-long kris (sword).</p>
+				</div>
+				<br><br><br>
+				<div class="cont">
+					<div id="pic" class="c5"></div>
+					<p><strong>Bell Tower</strong><br>An imposing landmark, this coral-stone tower was built between 1754–76, with the top layer or campanario (the part with the bell) added in 1867. Locals light candles and pray at a grotto at the base.</p>
+				</div>
+				<br><br><br>
+				<div class="cont">
+					<div id="pic" class="c6"></div>
+					<p><strong>Cathedral of St Catherine of Alexandria</strong><br>The city's and region's main Catholic church; the impressive facade mostly dates to 1936.</p>
+				</div>
+				<br><br><br>
+			</td>
+			<td valign="top">
+				<div class="ads">
+					<h2>ADVERTISEMENT</h2>
+					<img src="msi.jpg">
+					<a href="adverstiment-location.html"><h3>MANHATTAN SUITES INN</h3><a>
+					<p>address : South Road Calindagan, Dumaguete, 6200 Negros Oriental</p>
+					<p>phone : (035) 422 8200</p>
+					<br><br>
+					<img src="sr.jpg">
+					<a href="adverstiment-location.html"><h3>SANS RIVAL CAKES & PASTRIES</h3><a>
+					<p>address : San Jose St, Dumaguete, 6200 Negros Oriental</p>
+					<p>hours :  8:30AM – 8PM</p>
+					<p>phone : (035) 422 8200</p>
+					<br><br>
+					<img src="lzp.jpg">
+					<a href="adverstiment-location.html"><h3>LEE SUPER PLAZA</h3><a>
+					<p>address : Perdices corner San Jose St., Dumaguete</p>
+					<p>hours :  8AM – 7:30PM</p>
+					<p>phone : (035) 422 8200</p>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div class="end">
+	<br><br><br>
+		<table width="60%" style="margin-left: 40%">
+			<tr>
+				<td valign="top">
+				<h6>SIGN IN</h6>
+				<p>get updated</p>
+				<input type="email" placeholder="E-mail Account"/>
+				<input type="password" placeholder="Password"/>
+				<input type="submit" placeholder="submit"/>
+				</td>
+				<td valign="top">
+				<h6>KAMUSTA</h6>
+				<p>Mikhailangelo B. Panzo :: <i>website designer</i><br>
+				contact number: 0905 862 9483<br>
+				residence: Nonoc, Larena, Siquijor<br>
+				main office: Siquijor Provincial Science High School</p>
+				</td>
+		</table>
+	<br><br><br>
+	</div>
+</body>
+</html>
